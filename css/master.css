@@ -1,0 +1,362 @@
+/*=== Aplicando CSS Global===*/
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+ /*=== Aplicando CSS al Formulario===*/
+
+ #bodyForm{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(252, 252, 255, 1);
+    background-image:  radial-gradient(rgba(176,0,0,1) 1.55px, transparent 1.55px), radial-gradient(rgba(176,0,0,1) 1.55px, rgba(252, 252, 255, 1) 1.55px);
+    background-size: 62px 62px;
+    background-position: 0 0,31px 31px;
+display: flex;
+min-height: 100vh;
+
+}
+.formulario{
+    background-color: white;
+    margin:auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em; 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px;
+    text-align: center;
+
+}
+.formTitulo{
+font-size: 2rem;
+margin-bottom: .5em;
+}
+.formParrafo{
+  font-weight: 300;  
+}
+.formLink{
+    font-weight: 400;
+    color: rgb(176, 0, 0);
+
+}
+.formContainer{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+
+}
+.formGrupo{
+   position: relative; 
+   --color: #5757577e;
+}
+.formInput{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size:1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.formInput:not(:placeholder-shown){
+    color: #4d4646;
+}
+
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel{
+transform: translateY(-12px) scale(.7);
+transform-origin: left top;
+color: rgb(176, 0, 0);
+
+}
+.formLabel{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.formSubmit{
+background: rgb(176, 0, 0);
+color: white;
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+font-size: 1rem;
+padding: .8em 0;
+border: none;
+border-radius: .5em;
+}
+.formLine{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color:  rgb(176, 0, 0);
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.formInput:focus ~ .formLine,
+.formInput:not(:placeholder-shown) ~ .formLine{
+transform: scale(1);
+ }
+ .formContra{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgb(176, 0, 0); 
+ }
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 768px) {
+/*=== Aplicando CSS al encabezado===*/
+#logo img{
+    width: 50%;
+    margin: auto;
+    padding-top: 5px;
+}
+.formTitulo{
+    font-size: 1.8rem;
+ }
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+    #encabezado{
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       background-color: rgb(176, 0, 0);
+       align-items: center;
+       position: fixed;
+       width: 100%;
+       z-index: 50;
+    }
+
+    #opcionesMenu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+   .iconosMenu:hover{
+    cursor: pointer;
+    font-size: 1.5rem;
+
+   }
+    .icon{
+        font-size: 1rem;
+    }
+    .tituloLogo{
+        font-family: 'Henny Penny', cursive;
+        font-size: 3rem;
+        color: white;
+        align-items: center;
+        animation-name: titulologo;
+        animation-duration: 4s;
+        position: relative;
+}
+
+@keyframes titulologo {
+  0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;} 
+  100% { left:0px; top:0px;}
+}
+    #tituloLogo{
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+#titulobanner{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(176, 0, 0);
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+    
+}
+/*=== Aplicando CSS a la navegacion bb - niñas - niños===*/
+#tituloSecciones{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#secciones{
+background-color:rgb(176, 0, 0);
+font-size: 2rem;
+text-align: center;
+color: white;
+border-radius: 25px;
+box-shadow: 0 5px 10px -5px;
+}
+
+
+/*=== Aplicando CSS a la galeria===*/
+    #productos{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     padding: 10px;
+     align-items: center;
+    }
+ .botonImg{
+        border: 0;
+        line-height: 2.5;
+        padding: 0 10px;
+        font-size: 0.7rem;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 8px;
+        background-color:rgb(176, 0, 0);
+        background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    }
+    .parrafoImg{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;  
+        justify-content: center;
+        padding: 5px;
+    }
+    .tituloImg{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        justify-content: center; 
+        text-align: center; 
+        padding: 5px;
+        color: rgb(176, 0, 0);
+    }
+   #producto{
+    width: 95%;
+   }
+
+ 
+
+#presentacion1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center
+}
+#presentacion1 img{
+  padding: 50px;
+}
+#titulopresentacion{
+    font-size: 2rem;
+    padding: 50px;
+    color: rgb(176, 0, 0);
+   
+}
+.parrafosPresentacion{
+    font-size: 1.5rem;
+}
+#presentacion2{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+ /*=== Aplicando CSS al Footer===*/
+ #piePagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(176, 0, 0);
+    color: white;
+}
+#redesSociales{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+ion-icon{
+    color: white;
+    font-size: 2rem;
+}
+#contacto{
+    color: white;
+    font-size: 2rem;  
+    justify-content: center;
+    align-items: center; 
+}
+#mail{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#mail a{
+    color: white;
+    font-size: 1rem;  
+    justify-content: center;
+    align-items: center;
+}
+#wp{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#wp a{
+    color: white;
+    font-size: 1rem;  
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    width: 100%;
+
+}
+.controls{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid;
+}
+
+
+}
+@media (min-width: 1200px) { 
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+}
