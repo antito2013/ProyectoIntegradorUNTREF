@@ -126,6 +126,8 @@ transform: scale(1);
  }
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 768px) {
+
+
 /*=== Aplicando CSS al encabezado===*/
 #logo img{
     width: 50%;
@@ -240,6 +242,12 @@ box-shadow: 0 5px 10px -5px;
         background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
         box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
     }
+    .botonImg:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+
     .parrafoImg{
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
@@ -285,6 +293,12 @@ box-shadow: 0 5px 10px -5px;
     justify-items: center;
     align-items: center;
 }
+.imagGaleria:hover{
+cursor: pointer;
+transform: scale(1.1);
+
+}
+
  /*=== Aplicando CSS al Footer===*/
  #piePagina{
     display: grid;
@@ -350,10 +364,15 @@ ion-icon{
     margin-bottom: 16px;
     border: 1px solid;
 }
-
+.tituloMapa{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;  
+   
+}
 
 }
-@media (min-width: 1200px) { 
+@media (max-width: 1200px) { 
     .galeria{
         display: grid;
         grid-template-columns: repeat(4,1fr);
